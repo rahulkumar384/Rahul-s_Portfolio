@@ -3,7 +3,8 @@
 Personal portfolio website showcasing my skills, projects, and experience.
 
 ## 🔗 Live Demo
-[View Portfolio](https://rahulkumar384.github.io/rahul-s_portfolio)
+[View Portfolio](https://rahulkumar384.github.io/Rahul-s_Portfolio
+)
 
 ## 🛠️ Built With
 - HTML, CSS, JavaScript
