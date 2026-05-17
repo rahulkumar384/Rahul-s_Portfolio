@@ -3,6 +3,18 @@ export const portfolio = {
   title: "Senior Software Engineer",
   summary:
     "Results-driven Senior Software Engineer with a proven track record of architecting scalable microservices and robust middleware APIs. Adept at leveraging Node.js and Java (Quarkus) to optimize system performance and build high-availability backend solutions. Experienced in core banking integrations, real-time data orchestration, and cross-functional collaboration to deliver impactful fintech innovations.",
+  highlights: [
+    { label: "Years Experience", value: "4+" },
+    { label: "Fintech Systems", value: "Core Banking" },
+    { label: "Primary Stack", value: "Node.js + Java" },
+    { label: "Work Mode", value: "Remote / Onsite" },
+  ],
+  focusAreas: [
+    "Microservice architecture",
+    "Middleware API design",
+    "Core banking integrations",
+    "AI-assisted engineering",
+  ],
   availability: {
     remote: true,
     onsite: true,
@@ -74,12 +86,14 @@ export const portfolio = {
       description:
         "Developed and integrated critical core banking modules, including inward cheque clearing workflows, Trade Finance (Letter of Credit), and Foreign Documentary Bills Purchase (FDBP) processing regimens.",
       tech: ["Node.js", "Vue.js", "Java (Quarkus)", "Oracle SQL"],
+      impact: "Production-grade banking workflows across clearing, trade finance, and document bill processing.",
     },
     {
       title: "Credit Card Fraud Detection System",
       description:
         "Constructed a highly accurate Random Forest machine learning model capable of scanning large transaction datasets to rapidly detect anomalies and deliver actionable, per-user fraud insights.",
       tech: ["Python", "Machine Learning", "Pandas", "MongoDB"],
+      impact: "ML-backed anomaly detection workflow for transaction risk analysis and fraud insight generation.",
     },
   ],
   education: [
@@ -87,7 +101,7 @@ export const portfolio = {
   ],
   contact: {
     email: "rahuldeewan384@gmail.com",
-    github: "",
+    github: "rahulkumar384",
     linkedin: "linkedin.com/in/rahool-kumar-22392620",
   },
   certifications: [

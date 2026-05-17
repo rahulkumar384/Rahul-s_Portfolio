@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, Linkedin, Send } from "lucide-react";
+import { Github, Linkedin, Mail, Send } from "lucide-react";
 import { portfolio } from "../data/portfolio";
 
 const containerVariants = {
@@ -68,6 +68,20 @@ export default function Contact() {
                     <Linkedin size={18} className="text-cyber-pink" />
                   </div>
                   <span className="text-sm font-mono">LinkedIn Profile</span>
+                </motion.a>
+              )}
+              {portfolio.contact.github && (
+                <motion.a
+                  href={`https://github.com/${portfolio.contact.github}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ x: 4, boxShadow: "0 0 20px rgba(0,240,255,0.15)" }}
+                  className="flex items-center gap-4 text-gray-400 hover:text-white transition-colors group"
+                >
+                  <div className="w-10 h-10 rounded-lg bg-cyber-cyan/5 border border-cyber-cyan/15 flex items-center justify-center group-hover:border-cyber-cyan/40 group-hover:bg-cyber-cyan/10 transition-all">
+                    <Github size={18} className="text-cyber-cyan" />
+                  </div>
+                  <span className="text-sm font-mono">GitHub Profile</span>
                 </motion.a>
               )}
             </div>

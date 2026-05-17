@@ -2,7 +2,7 @@ import { useRef, useMemo, useCallback } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import * as THREE from "three";
 
-function AvatarBody() {
+export function AvatarBody() {
   const bodyRef = useRef<THREE.Group>(null);
 
   const bodyMaterial = useMemo(
@@ -87,7 +87,7 @@ function AvatarBody() {
   );
 }
 
-function AvatarHead() {
+export function AvatarHead() {
   const headRef = useRef<THREE.Group>(null);
   const targetRotation = useRef({ x: 0, y: 0 });
   const currentRotation = useRef({ x: 0, y: 0 });
@@ -293,7 +293,7 @@ function AvatarHead() {
   );
 }
 
-function MouseTracker() {
+export function MouseTracker() {
   const targetRotation = useRef({ x: 0, y: 0 });
 
   useFrame((state) => {

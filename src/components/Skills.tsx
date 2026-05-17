@@ -3,10 +3,38 @@ import { Code2, Database, Layers, Wrench } from "lucide-react";
 import { portfolio } from "../data/portfolio";
 
 const categories = [
-  { label: "Frontend", icon: Layers, items: portfolio.skills.frontend, color: "cyber-cyan", glow: "rgba(0,240,255,0.3)" },
-  { label: "Backend", icon: Code2, items: portfolio.skills.backend, color: "cyber-pink", glow: "rgba(255,0,229,0.3)" },
-  { label: "Tools & Libraries", icon: Wrench, items: portfolio.skills.tools, color: "cyber-purple", glow: "rgba(176,0,255,0.3)" },
-  { label: "Databases", icon: Database, items: portfolio.skills.databases, color: "cyber-blue", glow: "rgba(0,102,255,0.3)" },
+  {
+    label: "Frontend",
+    icon: Layers,
+    items: portfolio.skills.frontend,
+    glow: "rgba(0,240,255,0.3)",
+    iconClass: "text-cyber-cyan bg-cyber-cyan/10 border-cyber-cyan/20",
+    chipClass: "text-cyber-cyan bg-cyber-cyan/5 border-cyber-cyan/15",
+  },
+  {
+    label: "Backend",
+    icon: Code2,
+    items: portfolio.skills.backend,
+    glow: "rgba(255,0,229,0.3)",
+    iconClass: "text-cyber-pink bg-cyber-pink/10 border-cyber-pink/20",
+    chipClass: "text-cyber-pink bg-cyber-pink/5 border-cyber-pink/15",
+  },
+  {
+    label: "Tools & Libraries",
+    icon: Wrench,
+    items: portfolio.skills.tools,
+    glow: "rgba(176,0,255,0.3)",
+    iconClass: "text-cyber-purple bg-cyber-purple/10 border-cyber-purple/20",
+    chipClass: "text-cyber-purple bg-cyber-purple/5 border-cyber-purple/15",
+  },
+  {
+    label: "Databases",
+    icon: Database,
+    items: portfolio.skills.databases,
+    glow: "rgba(0,102,255,0.3)",
+    iconClass: "text-cyber-blue bg-cyber-blue/10 border-cyber-blue/20",
+    chipClass: "text-cyber-blue bg-cyber-blue/5 border-cyber-blue/15",
+  },
 ];
 
 const containerVariants = {
@@ -51,8 +79,8 @@ export default function Skills() {
               className="glass-card p-6 group cursor-default"
             >
               <div className="flex items-center gap-3 mb-5">
-                <div className={`w-9 h-9 rounded-lg bg-${cat.color}/10 border border-${cat.color}/20 flex items-center justify-center`}>
-                  <cat.icon size={18} className={`text-${cat.color}`} />
+                <div className={`w-9 h-9 rounded-lg border flex items-center justify-center ${cat.iconClass}`}>
+                  <cat.icon size={18} />
                 </div>
                 <h3 className="text-white font-semibold font-mono text-sm">{cat.label}</h3>
               </div>
@@ -68,7 +96,7 @@ export default function Skills() {
                       scale: 1.1,
                       boxShadow: `0 0 12px ${cat.glow}`,
                     }}
-                    className={`px-3 py-1.5 text-xs font-mono font-medium text-${cat.color} bg-${cat.color}/5 border border-${cat.color}/15 rounded-md cursor-default transition-all duration-200`}
+                    className={`px-3 py-1.5 text-xs font-mono font-medium border rounded-md cursor-default transition-all duration-200 ${cat.chipClass}`}
                   >
                     {skill}
                   </motion.span>

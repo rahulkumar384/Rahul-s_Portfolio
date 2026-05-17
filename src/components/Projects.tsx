@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FolderGit2, X } from "lucide-react";
+import { ArrowUpRight, FolderGit2, Gauge, X } from "lucide-react";
 import { portfolio } from "../data/portfolio";
 
 const containerVariants = {
@@ -45,6 +45,15 @@ function ProjectModal({ project, onClose }: { project: typeof portfolio.projects
         </div>
 
         <p className="text-gray-400 text-sm leading-relaxed mb-6">{project.description}</p>
+        {"impact" in project && (
+          <div className="mb-6 rounded-lg border border-cyber-cyan/15 bg-cyber-cyan/5 p-4">
+            <div className="mb-2 flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-cyber-cyan">
+              <Gauge size={14} />
+              Impact
+            </div>
+            <p className="text-sm leading-relaxed text-gray-300">{project.impact}</p>
+          </div>
+        )}
 
         <div className="flex flex-wrap gap-2 mb-6">
           {project.tech.map((t) => (
@@ -112,6 +121,13 @@ export default function Projects() {
               <p className="text-sm text-gray-400 leading-relaxed mb-6 line-clamp-3">
                 {proj.description}
               </p>
+              <div className="mb-6 rounded-lg border border-white/10 bg-white/[0.03] p-4">
+                <div className="mb-2 flex items-center gap-2 text-[10px] font-mono uppercase tracking-widest text-cyber-cyan">
+                  <Gauge size={13} />
+                  Key Outcome
+                </div>
+                <p className="text-sm leading-relaxed text-gray-300">{proj.impact}</p>
+              </div>
               <div className="flex flex-wrap gap-2">
                 {proj.tech.map((t) => (
                   <span
@@ -121,6 +137,10 @@ export default function Projects() {
                     {t}
                   </span>
                 ))}
+              </div>
+              <div className="mt-6 inline-flex items-center gap-2 text-xs font-mono font-semibold text-cyber-cyan opacity-70 transition group-hover:opacity-100">
+                View Details
+                <ArrowUpRight size={14} />
               </div>
             </motion.div>
           ))}
